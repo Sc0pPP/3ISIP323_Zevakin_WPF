@@ -7,6 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10">
+                <TextBlock x:Name="TitleTextBlock" Margin="5" VerticalAlignment="Center"/>
+                <Button x:Name="BackButton" Grid.Row="0" Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BackButton_OnClick"/>
+            </StackPanel>
+            <Frame x:Name="MainFrame" Grid.Row="1" Source="pages/Engine.xaml" Navigated="MainFrame_OnNavigated" NavigationUIVisibility="Hidden"/>
+        </Grid>
     </Grid>
 </Window>

@@ -63,12 +63,48 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Car.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="pages\Bid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\ColorDop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Costparametrs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Credit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="pages\Engine.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="pages\Bid.xaml.cs">
+      <DependentUpon>Bid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\ColorDop.xaml.cs">
+      <DependentUpon>ColorDop.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Costparametrs.xaml.cs">
+      <DependentUpon>Costparametrs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Credit.xaml.cs">
+      <DependentUpon>Credit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\Engine.xaml.cs">
+      <DependentUpon>Engine.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
