@@ -9,6 +9,18 @@
       Title="ColorDop">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Grid.Row="0">
+            <TextBlock Text="Выберете цвет" />
+            <ComboBox x:Name="type_car" Width="100" Height="50" SelectionChanged="type_car_SelectionChanged" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal"  Grid.Row="1">
+            <TextBlock Text="Выберете тип двигателя" />
+            <ComboBox x:Name="type_engine" Width="100" Height="50" SelectionChanged="type_engine_SelectionChanged"/>
+        </StackPanel>
+        <Button Content="Далее" Width="100" Height="50" Grid.Row="1" VerticalAlignment="Bottom" Click="Button_Click"/>
     </Grid>
 </Page>
