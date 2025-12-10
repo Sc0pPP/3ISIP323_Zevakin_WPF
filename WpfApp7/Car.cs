@@ -31,18 +31,16 @@ namespace WpfApp7
     public enum options
     {
         stove=50000,
-        windows=100000,
         steering_wheel=70000,
         seat_vmesto_bytilky=150000
     }
-   
+    
     internal static class Car
     {
-        public static marka marka {  get;private set; }
-        public static engine engine { get; private set; }
-        public static color color { get; private set; }
-        public static options options { get; private set; }
-
+        public static int marka {  get; set; }
+        public static int engine { get; set; }
+        public static int color { get; set; }
+        public static int options { get; set; }
 
     }
     

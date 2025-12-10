@@ -29,6 +29,7 @@ namespace WpfApp7.pages
         public static List<marka> mark= Enum.GetValues(typeof(marka))
                                               .Cast<marka>() // Приведение типов
                                               .ToList(); // Преобразование в List
+
         public Engine()
         {
             InitializeComponent();
@@ -43,15 +44,20 @@ namespace WpfApp7.pages
 
         private void type_car_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (type_car.SelectedItem != null)
-            {
-                marka selectedMark = (marka)Enum.Parse(typeof(marka), type_car.SelectedItem.ToString());
-            }
+            marka markaa;
+           // Car.marka = (marka)Enum.Parse(typeof(marka), type_car.SelectedItem.ToString());
+            markaa = (marka)Enum.Parse(typeof(marka), type_car.SelectedItem.ToString());
+            Car.marka = (int)Enum.Parse(typeof(marka), Convert.ToString(markaa));
+            
+
+
         }
 
         private void type_engine_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             engine selectedMark = (engine)Enum.Parse(typeof(engine), type_engine.SelectedItem.ToString());
+            Car.engine = (int)Enum.Parse(typeof(engine), Convert.ToString(selectedMark));
+           
         }
     }
 }

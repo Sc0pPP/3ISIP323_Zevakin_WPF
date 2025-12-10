@@ -23,6 +23,8 @@ namespace WpfApp7.pages
         public Costparametrs()
         {
             InitializeComponent();
+            
         }
+        
     }
 }
