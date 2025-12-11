@@ -10,25 +10,25 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="120"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="0" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="30" Grid.Row="0" VerticalAlignment="Center">
             <TextBlock Text="Введите ваше ФИО"/>
-            <TextBox x:Name="FIO" Width="200" Margin="100,0"/>
+            <TextBox x:Name="FIO" Width="200" Margin="100,0" TextChanged="FIO_TextChanged"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="1" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="30" Grid.Row="1" VerticalAlignment="Center">
             <TextBlock Text="Введите ваш телефон"/>
-            <TextBox x:Name="phone" Width="200" Margin="100,0"/>
+            <TextBox x:Name="phone" Width="200" Margin="100,0" PreviewTextInput="phone_OnPreviewTextInput"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="2" VerticalAlignment="Center">
+        <StackPanel Orientation="Horizontal" Margin="30" Grid.Row="2" VerticalAlignment="Center">
             <TextBlock Text="Введите вашу почту"/>
             <TextBox x:Name="pochta" Width="200" Margin="100,0"/>
         </StackPanel>
-        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <Button Content="Подать Заявку"/>
+        <StackPanel Orientation="Horizontal" Margin="30" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Подать Заявку" Click="Button_Click"/>
         </StackPanel>
 
     </Grid>

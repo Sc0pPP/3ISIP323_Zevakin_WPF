@@ -14,6 +14,13 @@
             </Grid.RowDefinitions>
             <StackPanel Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="10">
                 <TextBlock x:Name="TitleTextBlock" Margin="5" VerticalAlignment="Center"/>
+
+                <ProgressBar x:Name="progress_bar"
+    Height="30"
+    Minimum="1"
+    Maximum="5"
+    Value="1"
+    Width="100"/>
                 <Button x:Name="BackButton" Grid.Row="0" Content="Назад" HorizontalAlignment="Right" VerticalAlignment="Center" Click="BackButton_OnClick"/>
             </StackPanel>
             <Frame x:Name="MainFrame" Grid.Row="1" Source="pages/Engine.xaml" Navigated="MainFrame_OnNavigated" NavigationUIVisibility="Hidden"/>

@@ -43,11 +43,16 @@ namespace WpfApp7.pages
             {
                 options.Text += "," + ((options)Enum.Parse(typeof(options), option[2].ToString()));
             }
+
+
+
+
             
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            Car.fuloptions = options.Text;
             NavigationService.Navigate(new Credit());
         }
     }

@@ -15,7 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace WpfApp7.pages
-{
+{ 
    
     public partial class Engine : Page
     {
@@ -30,16 +30,22 @@ namespace WpfApp7.pages
                                               .Cast<marka>() // Приведение типов
                                               .ToList(); // Преобразование в List
 
-
+        
         public Engine()
         {
             InitializeComponent();
             type_engine.ItemsSource = engin;
             type_car.ItemsSource = mark;
+      
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if((type_car.SelectedIndex == -1)| (type_engine.SelectedIndex == -1))
+            {
+                MessageBox.Show("незаполнено");
+                return;
+            }
             NavigationService.Navigate(new ColorDop());
         }
 

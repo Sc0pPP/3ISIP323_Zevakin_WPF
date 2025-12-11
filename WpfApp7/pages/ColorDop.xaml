@@ -14,11 +14,11 @@
             <RowDefinition Height="150"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Grid.Row="0">
-            <TextBlock Text="Выберете тип автомобиля" />
+            <TextBlock Text="Выберете цвет" />
             <ComboBox x:Name="type_color" Width="100" Height="50" SelectionChanged="type_color_SelectionChanged"  />
         </StackPanel>
         <StackPanel Orientation="Horizontal"  Grid.Row="1">
-            <TextBlock Text="Выберете тип двигателя" />
+            <TextBlock Text="Выберете дополнительный опции" />
             <StackPanel>
                 <CheckBox x:Name="rbutton1" Checked="rbutton1_Checked"/>
                 <CheckBox x:Name="rbutton2" Checked="rbutton2_Checked"/>

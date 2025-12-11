@@ -42,6 +42,12 @@ namespace WpfApp7.pages
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if ((string.IsNullOrWhiteSpace(vznos.Text)) | (string.IsNullOrWhiteSpace(srok.Text)))
+            {
+                MessageBox.Show("незаполнено");
+                return;
+            }
+            
             // Входные данные
             double C = Car.cost;                       // цена автомобиля
             double P = Convert.ToDouble(vznos.Text);   // первоначальный взнос
@@ -69,12 +75,29 @@ namespace WpfApp7.pages
             }
             perv.Text = vznos.Text;
             summ.Text=Convert.ToString(S);
+            Car.sum_of_credit = Convert.ToInt32(S);
+            Car.plat_credit=Convert.ToInt32(A);
             platezh.Text = Convert.ToString(A);
+
+
+           
+           
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             NavigationService.Navigate(new Bid());
         }
+
+        private void srok_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.Text[0]);
+        }
+        private void vznos_OnPreviewTextInput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.Text[0]);
+        }
+
+        
     }
 }

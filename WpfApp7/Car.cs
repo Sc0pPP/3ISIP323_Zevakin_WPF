@@ -47,6 +47,11 @@ namespace WpfApp7
         public static bool option2 { get; set; }
         public static bool option3 { get; set; }
         public static int cost = 0;
+        public static string fuloptions { get; set; }
+        public static int sum_of_credit {  get; set; }
+        public static int plat_credit { get; set; }
+        public static string FIO { get; set; }
+        public static string phone { get; set; }
 
     }
     

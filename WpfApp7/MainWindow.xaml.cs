@@ -35,11 +35,21 @@ namespace WpfApp7
         private void MainFrame_OnNavigated(object sender, NavigationEventArgs e)
         {
             BackButton.Visibility = MainFrame.CanGoBack ? Visibility.Visible : Visibility.Collapsed;
+            if (MainFrame.CanGoForward)
+            {
+                progress_bar.Value--;
+            }
+            else
+            {
+                progress_bar.Value++;
+            }
 
             if (e.Content is Page page)
             {
                 TitleTextBlock.Text = page.Title;
             }
+            
+            
         }
     }
 }

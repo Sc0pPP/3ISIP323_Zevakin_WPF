@@ -33,12 +33,17 @@ namespace WpfApp7.pages
             rbutton2.Content= options[1];
             rbutton3.Content = options[2];
             type_color.ItemsSource = Color;
-           
         }
-
+            
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if ((type_color.SelectedIndex == -1))
+            {
+                MessageBox.Show("незаполнено");
+                return;
+            }
             NavigationService.Navigate(new Costparametrs());
+           
         }
 
         private void rbutton1_Checked(object sender, RoutedEventArgs e)
