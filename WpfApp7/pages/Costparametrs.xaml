@@ -9,6 +9,13 @@
       Title="Costparametrs">
 
     <Grid>
-        
+        <StackPanel Orientation="Vertical"  Margin="90,50">
+            <TextBlock Text="Итоговая стоимость"  x:Name="cost" />
+        <TextBlock Text="кузов-" x:Name="marka" Margin="0,25"/>
+            <TextBlock Text="двигатель-" x:Name="engine" Margin="0,25"/>
+            <TextBlock Text="цвет-"  x:Name="color" Margin="0,25"/>
+            <TextBlock Text="доп опции-"  x:Name="options" Margin="0,25"/>
+            </StackPanel>
+        <Button Content="Далее" Width="100" Height="70" VerticalAlignment="Bottom" Margin="0,0,0,80" Click="Button_Click"/>
     </Grid>
 </Page>

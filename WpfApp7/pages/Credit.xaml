@@ -9,6 +9,28 @@
       Title="Credit">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+        <RowDefinition Height="120"/>
+        <RowDefinition Height="120"/>
+        <RowDefinition Height="120"/>
+        <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock Text="Введите первоначальный взнос по кредиту" Width="auto"/>
+            <TextBox x:Name="vznos" Width="100" Height="20" Margin="100,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Text="Введите срок кредита" Width="auto"/>
+            <TextBox x:Name="srok" Width="100" Height="20" Margin="220,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="2" VerticalAlignment="Center">
+            <TextBlock x:Name="perv" Text="первоначальный взнос"/>
+            <TextBlock x:Name="summ" Text="Сумма в кредит" Margin="60,0"/>
+            <TextBlock x:Name="platezh" Text="платеж" Margin="60,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="3" VerticalAlignment="Center">
+            <Button Content="Рассчитать кредит" Margin="80,0" Click="Button_Click"/>
+            <Button Content="далее" Margin="250,0" Width="50" Click="Button_Click_1" />
+        </StackPanel>
     </Grid>
 </Page>

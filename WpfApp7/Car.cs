@@ -37,10 +37,16 @@ namespace WpfApp7
     
     internal static class Car
     {
-        public static int marka {  get; set; }
-        public static int engine { get; set; }
-        public static int color { get; set; }
-        public static int options { get; set; }
+        public static List<options> options = Enum.GetValues(typeof(options))
+                                              .Cast<options>() // Приведение типов
+                                              .ToList(); // Преобразование в List
+        public static marka marka {  get; set; }
+        public static engine engine { get; set; }
+        public static color color { get; set; }
+        public static bool option1 { get; set; }
+        public static bool option2 { get; set; }
+        public static bool option3 { get; set; }
+        public static int cost = 0;
 
     }
     

@@ -44,22 +44,34 @@ namespace WpfApp7.pages
         private void rbutton1_Checked(object sender, RoutedEventArgs e)
         {
             
-            Car.options = (int)Enum.Parse(typeof(options), Convert.ToString((options)Enum.Parse(typeof(marka), rbutton1.Content.ToString())));
-
+            Car.option1 = true;
+            if (Car.option1 == true) { 
+            Car.cost+=(int)Enum.Parse(typeof(options), Convert.ToString((options)Enum.Parse(typeof(options), rbutton1.Content.ToString())));
+            }
         }
         private void rbutton2_Checked(object sender, RoutedEventArgs e)
         {
-            Car.options = (int)Enum.Parse(typeof(options), Convert.ToString((options)Enum.Parse(typeof(marka), rbutton2.Content.ToString())));
+           
+            Car.option2 = true;
+            if (Car.option2 == true)
+            {
+                Car.cost +=(int)Enum.Parse(typeof(options), Convert.ToString((options)Enum.Parse(typeof(options), rbutton2.Content.ToString())));
+            }
         }
         private void rbutton3_Checked(object sender, RoutedEventArgs e)
         {
-            Car.options = (int)Enum.Parse(typeof(options), Convert.ToString((options)Enum.Parse(typeof(marka), rbutton3.Content.ToString())));
+            Car.option3 = true;
+            if (Car.option3 == true)
+            {
+                Car.cost +=(int)Enum.Parse(typeof(options), Convert.ToString((options)Enum.Parse(typeof(options), rbutton3.Content.ToString())));
+            }
         }
 
         private void type_color_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            color selectedColor = (engine)Enum.Parse(typeof(engine), type_engine.SelectedItem.ToString());
-            Car.engine = (int)Enum.Parse(typeof(engine), Convert.ToString(selectedMark));
+            color selectedColor = (color)Enum.Parse(typeof(color), type_color.SelectedItem.ToString());
+            Car.color = selectedColor;
+            Car.cost+= (int)Enum.Parse(typeof(color), Convert.ToString(selectedColor));
         }
     }
 }

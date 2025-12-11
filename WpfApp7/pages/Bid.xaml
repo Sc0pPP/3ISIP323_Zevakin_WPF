@@ -9,6 +9,27 @@
       Title="Bid">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="120"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="0" VerticalAlignment="Center">
+            <TextBlock Text="Введите ваше ФИО"/>
+            <TextBox x:Name="FIO" Width="200" Margin="100,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Text="Введите ваш телефон"/>
+            <TextBox x:Name="phone" Width="200" Margin="100,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="2" VerticalAlignment="Center">
+            <TextBlock Text="Введите вашу почту"/>
+            <TextBox x:Name="pochta" Width="200" Margin="100,0"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="50" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Подать Заявку"/>
+        </StackPanel>
+
     </Grid>
 </Page>

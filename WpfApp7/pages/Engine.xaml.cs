@@ -30,6 +30,7 @@ namespace WpfApp7.pages
                                               .Cast<marka>() // Приведение типов
                                               .ToList(); // Преобразование в List
 
+
         public Engine()
         {
             InitializeComponent();
@@ -47,7 +48,8 @@ namespace WpfApp7.pages
             marka markaa;
            // Car.marka = (marka)Enum.Parse(typeof(marka), type_car.SelectedItem.ToString());
             markaa = (marka)Enum.Parse(typeof(marka), type_car.SelectedItem.ToString());
-            Car.marka = (int)Enum.Parse(typeof(marka), Convert.ToString(markaa));
+            Car.marka = markaa;
+            Car.cost+= (int)Enum.Parse(typeof(marka), Convert.ToString(markaa));
             
 
 
@@ -56,7 +58,8 @@ namespace WpfApp7.pages
         private void type_engine_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             engine selectedMark = (engine)Enum.Parse(typeof(engine), type_engine.SelectedItem.ToString());
-            Car.engine = (int)Enum.Parse(typeof(engine), Convert.ToString(selectedMark));
+            Car.engine = selectedMark;
+           Car.cost+= (int)Enum.Parse(typeof(engine), Convert.ToString(selectedMark));
            
         }
     }
