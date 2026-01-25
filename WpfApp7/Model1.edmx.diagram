@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3e401c86ee2a43f4a83e3627c577989d" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="Shop_13prModel.Cart" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Shop_13prModel.Order" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Shop_13prModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="2.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Shop_13prModel.Tovary" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Shop_13prModel.TovaryOrder" Width="1.5" PointX="5.25" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="Shop_13prModel.Users" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="Shop_13prModel.FK_Cart_Tovary" ManuallyRouted="false" />
+        <AssociationConnector Association="Shop_13prModel.FK_Cart_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Shop_13prModel.FK_Order_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="Shop_13prModel.FK_TovaryOrder_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="Shop_13prModel.FK_TovaryOrder_Tovary" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
