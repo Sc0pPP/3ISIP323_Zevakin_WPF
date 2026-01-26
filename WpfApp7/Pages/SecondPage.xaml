@@ -9,6 +9,22 @@
       Title="SecondPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListBox Grid.Column="0" Grid.Row="0" x:Name="prod">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source= "{Binding path}" Width="100" Height="125"/>
+                        <TextBlock x:Name="TxtAbout" Text="{Binding description}"/>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+        <Button Content="Оформить заказ" Grid.Row="1" Width="200" Height="50" Margin="50" VerticalAlignment="Bottom" Click="Button_Click"/>
     </Grid>
 </Page>

@@ -20,6 +20,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" Nullable="false" />
           <Property Name="Date" Type="datetime" Nullable="false" />
+          <Property Name="TovarID" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -55,6 +56,7 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="info" Type="nvarchar" MaxLength="155" Nullable="false" />
         </EntityType>
         <Association Name="FK_Cart_Tovary">
           <End Role="Tovary" Type="Self.Tovary" Multiplicity="1" />
@@ -167,6 +169,7 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="Users" Relationship="Self.FK_Order_Users" FromRole="Order" ToRole="Users" />
           <NavigationProperty Name="TovaryOrder" Relationship="Self.FK_TovaryOrder_Order" FromRole="Order" ToRole="TovaryOrder" />
+          <Property Name="TovarID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -208,6 +211,7 @@
           <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Cart" Relationship="Self.FK_Cart_Users" FromRole="Users" ToRole="Cart" />
           <NavigationProperty Name="Order" Relationship="Self.FK_Order_Users" FromRole="Users" ToRole="Order" />
+          <Property Name="info" Type="String" Nullable="false" MaxLength="155" FixedLength="false" Unicode="true" />
         </EntityType>
         <Association Name="FK_Cart_Tovary">
           <End Role="Tovary" Type="Self.Tovary" Multiplicity="1" />
@@ -315,6 +319,7 @@
           <EntitySetMapping Name="Order">
             <EntityTypeMapping TypeName="Shop_13prModel.Order">
               <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="TovarID" ColumnName="TovarID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
@@ -354,6 +359,7 @@
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="Shop_13prModel.Users">
               <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="info" ColumnName="info" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
                 <ScalarProperty Name="Password" ColumnName="Password" />

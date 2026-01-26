@@ -18,9 +18,19 @@ namespace WpfApp7.Pages
     
     public partial class SecondPage : Page
     {
-        public SecondPage(cart)
+        public List<Tovary> Tov = new List<Tovary>();
+        public List<product> cartProduct=new List<product>();
+        public SecondPage(List<Tovary> tov, List<product> CartProduct)
         {
             InitializeComponent();
+            Tov = tov;
+            cartProduct= CartProduct;
+            prod.ItemsSource = CartProduct;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new ThirdPage(Tov as List<Tovary> ,cartProduct as List<product>));
         }
     }
 }

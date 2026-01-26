@@ -53,17 +53,11 @@ namespace WpfApp7.Pages
         {
             Button btn = sender as Button;
 
-            var product = btn.DataContext as product;
+            product product = btn.DataContext as product;
             string TempPath= product.path;
             if (product != null)
             {
-                foreach (product prod in List)
-                {
-                    if (product.path == prod.path) {
-                    CartPtoduct.Add(prod);
-                    }
-                   
-                }
+                CartPtoduct.Add(product);
                 }
             foreach(Tovary tovar in tov)
             {
@@ -76,7 +70,7 @@ namespace WpfApp7.Pages
 
         private void Further_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new SecondPage(cart as List<Tovary>));
+            NavigationService.Navigate(new SecondPage(tov as List<Tovary>,CartPtoduct as List<product>));
         }
     }
 }

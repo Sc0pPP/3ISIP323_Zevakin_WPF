@@ -9,6 +9,35 @@
       Title="ThirdPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="Введите ваше фио"/>
+            <TextBox  Width="300" x:Name="FIO" HorizontalAlignment="Left" TextChanged="FIO_TextChanged"/>
+            <TextBlock Text="Введите ваш индекс"/>
+            <TextBox Width="300" x:Name="Index" HorizontalAlignment="Left" TextChanged="Index_TextChanged"/>
+            <TextBlock Text="Введите ваш адрес"/>
+            <TextBox Width="300" x:Name="Addres"  HorizontalAlignment="Left" TextChanged="Addres_TextChanged"/>
+            <TextBlock Text="Введите ваш пароль"/>
+            <TextBox Width="300" x:Name="Password"  HorizontalAlignment="Left" TextChanged="Password_TextChanged"/>
+        </StackPanel>
+        <ListBox Grid.Column="0" Grid.Row="1" x:Name="prod">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source= "{Binding path}" Width="50" Height="62.5"/>
+                        <TextBlock x:Name="TxtAbout" Text="{Binding description}"/>
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+            
+        </ListBox>
+        <TextBox x:Name="AllPrice" Grid.Row="2" Width="200" Height="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10"/>
+        <Button Content="Оформить заказ" Width="150" Height="40" Grid.Row="3" x:Name="addorder" Click="addorder_Click"/>
     </Grid>
 </Page>

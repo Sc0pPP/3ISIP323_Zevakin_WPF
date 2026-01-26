@@ -23,6 +23,7 @@ namespace WpfApp7
         public int ID { get; set; }
         public int UserID { get; set; }
         public System.DateTime Date { get; set; }
+        public int TovarID { get; set; }
     
         public virtual Users Users { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
