@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="386e16be2a5047d091381c13594268bf" Name="Diagram1">
+        <EntityTypeShape EntityType="KinoteathorModel.Genres" Width="1.5" PointX="0.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.Halls" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.Movies" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.Seats" Width="1.5" PointX="5.25" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.Sessions" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.SessionSeats" Width="1.5" PointX="7.5" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.Tickets" Width="1.5" PointX="7.5" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KinoteathorModel.Users" Width="1.5" PointX="5.25" PointY="8.5" IsExpanded="true" />
+        <AssociationConnector Association="KinoteathorModel.FK_Sessions_Halls1" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoteathorModel.FK_Sessions_Movies" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoteathorModel.FK_SessionSeats_Seats" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoteathorModel.FK_Tickets_Seats" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoteathorModel.FK_SessionSeats_Sessions" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoteathorModel.FK_Tickets_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="KinoteathorModel.MovieGenres" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
