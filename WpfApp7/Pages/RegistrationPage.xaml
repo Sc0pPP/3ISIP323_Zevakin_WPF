@@ -9,7 +9,21 @@
       Title="RegistrationPage">
 
     <Grid>
-        
-        
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Width="300">
+            <TextBlock Text="Регистрация" FontSize="25" HorizontalAlignment="Center" Margin="0 0 0 20"/>
+
+            <TextBlock Text="Имя пользователя" Margin="10,0,10,0"/>
+            <TextBox x:Name="UserName" Height="35" Margin="10" />
+            <TextBlock Text="Пароль" Margin="10,0,10,0"/>
+            <TextBox x:Name="UserPassword" Height="35" Margin="10"/>
+
+            <TextBlock Text="Повторите пароль" Margin="10,0,10,0"/>
+            <TextBox x:Name="PasswordProv" Height="35" Margin="10"/>
+
+            <Button Content="Зарегистрироваться" Height="40" Margin="0 0 0 10" Click="Button_Click"/>
+
+            <TextBlock HorizontalAlignment="Center">
+            </TextBlock>
+        </StackPanel>
     </Grid>
 </Page>

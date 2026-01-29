@@ -45,5 +45,11 @@ namespace WpfApp7.Pages
             List<Movies> MoviesName = (List<Movies>)movies_bd.OrderBy(u => u.MovieName).ToList();
             prod.ItemsSource = MoviesName;
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            List<Movies> moviesSearch = movies_bd.Where(p => p.MovieName.ToLower().Contains(Search.Text.ToLower())).ToList();
+            prod.ItemsSource = moviesSearch;
+        }
     }
 }
